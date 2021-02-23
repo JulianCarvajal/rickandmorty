@@ -1,8 +1,3 @@
-console.log('Hello');
+import router from './routes';
 
-const blabla = () => {
-    let bla = 'blabla'
-    return bla
-}
-
-blabla()
+window.addEventListener('load', router);

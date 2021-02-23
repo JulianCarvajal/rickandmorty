@@ -2,6 +2,8 @@ import Header from '../templates/Header';
 import Home from '../pages/Home';
 import Character from '../pages/Character';
 import Error from '../pages/Error404';
+import getHash from '../utils/getHash';
+import resolveRoutes from '../utils/resolveRoutes';
 
 const routes = {
     '/': Home,
@@ -15,3 +17,5 @@ const router = async () => {
 
     header.innerHTML = await Header();
 }
+
+export default router;
