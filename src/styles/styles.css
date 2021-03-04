@@ -1,25 +1,43 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
 
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #3c484e;
-  font-family: 'Open Sans', sans-serif;
 }
 
-.Header-main {
+html{
+  font-size: 62.5%;
+}
+
+.Header-main{
+  width: 100%;
+  padding: 10px;
+}
+.Header-logo {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.Header-logo img {
+  width: 100%;
+}
+.burger-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  font-size: 2.5rem;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: black;
+  width: 40px;
+  height: 40px;
 }
 
-.Header a {
-  text-decoration: none;
-  color: #15302C;
-}
+/* font-family: 'Open Sans', sans-serif; */
 
 .Main {
+  display: none;
   padding: 10px;
   grid-template-columns: minmax(auto, 976px);
   display: grid;
