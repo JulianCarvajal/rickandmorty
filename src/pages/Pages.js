@@ -1,7 +1,9 @@
+import getHash from '../utils/getHash';
 import getData from '../utils/getData';
 
-const Home = async () => {
-    const characters = await getData();
+const Pages = async () => {
+    const pageNumber = getHash();
+    const characters = await getData(pageNumber);
     const prev = characters.info.prev;
     const next = characters.info.next;
     const before = prev ? `
@@ -31,4 +33,4 @@ const Home = async () => {
     return view;
 }
 
-export default Home;
+export default Pages;
