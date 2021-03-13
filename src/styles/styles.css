@@ -1,6 +1,8 @@
 :root{
   --color: #00849b;
   --background: #070044;
+  /* --footer-background: #050033; */
+  --footer-background: #05002A;
 }
 
 *{
@@ -97,14 +99,16 @@ body {
   border-radius: 0 0 5px 5px;
 }
 
-.Characters-inner {
+
+/* Characters Card info */
+.Character-inner {
   grid-template-columns: 1fr 2fr;
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
   display: grid;
 }
 
-.Characters-card {
+.Character-card {
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
   border-radius: 5px;
@@ -114,23 +118,48 @@ body {
   animation-name: fade;
 }
 
-.Characters-card img {
+.Character-card img {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
 }
 
-.Characters-card h2 {
+.Character-card h2 {
   font-size: 18px;
   font-weight: 400;
   text-align: center;
 }
 
-.Characters-card h3 {
+.Character-card h3 {
   font-size: 18px;
   font-weight: 400;
   text-align: left;
   margin: 20px;
+}
+
+
+/* Footer */
+.Footer {
+  width: 100%;
+  padding: 20px 10px;
+  background-color: var(--footer-background);
+}
+.Footer-contact {
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: repeat(2, 40px);
+  justify-content: center;
+}
+.contact-item {
+  text-decoration: none;
+  color: rgb(180, 180, 180);
+  font-size: 2rem;
+}
+.contact-item span:hover {
+  text-decoration: underline;
+}
+.contact-item span {
+  margin-left: 15px;
 }
 
 @keyframes fade {
