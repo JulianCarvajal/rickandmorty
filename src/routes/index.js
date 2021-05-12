@@ -7,6 +7,7 @@ import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
 import showMenu from '../utils/showMenu';
 import Error404 from '../pages/Error404';
+import searchFunction from '../utils/searchFunction';
 
 const routes = {
     '/': Home,
@@ -29,6 +30,9 @@ const router = async () => {
 
     const button = await document.getElementById('menu_button');
     button.addEventListener('click', showMenu);
+
+    const searchButton = document.getElementById('searchButton');
+    searchButton.addEventListener('click', searchFunction);
 }
 
 export default router;
