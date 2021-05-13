@@ -13,10 +13,6 @@ const Home = async () => {
             <i class="fas fa-chevron-circle-right"></i>
         </a>`: ` `;
     const view = `
-    <div class="Pages">
-        ${before}${after}
-    </div>
-
     <div class="Characters">
         ${characters.results.map(character => `
             <article class="Character-item">
@@ -28,6 +24,9 @@ const Home = async () => {
         `).join('')}
     </div>
 
+    <div class="Pages">
+        ${before}${after}
+    </div>
     `;
     return view;
 }
