@@ -36,7 +36,13 @@ const router = async () => {
     button.addEventListener('click', showMenu);
 
     const searchButton = document.getElementById('searchButton');
+    const input = document.getElementById('searchInput');
     searchButton.addEventListener('click', searchFunction);
+    input.addEventListener('keyup', ({key}) => {
+        if (key == 'Enter') {
+            searchFunction()
+        }
+    })
 }
 
 export default router;
