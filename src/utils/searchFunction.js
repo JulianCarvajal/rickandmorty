@@ -4,11 +4,7 @@ const searchFunction = () => {
     let inputValue = input.value;
     let newLocation = `?name=${inputValue}`;
 
-    if (location.hash) {
-        location.href = `${newLocation}`;
-    } else {
-        location.href = `#/${newLocation}`;
-    }
+    location.href = `#/${newLocation}`;
 }
 
 export default searchFunction;

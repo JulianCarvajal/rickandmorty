@@ -6,7 +6,6 @@ import Pages from '../pages/Pages';
 import Character from '../pages/Character';
 import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
-import showMenu from '../utils/showMenu';
 import Error404 from '../pages/Error404';
 import searchFunction from '../utils/searchFunction';
 
@@ -32,11 +31,14 @@ const router = async () => {
 
     footer.innerHTML = await Footer();
 
-    const button = await document.getElementById('menu_button');
-    button.addEventListener('click', showMenu);
-
     const searchButton = document.getElementById('searchButton');
+    const input = document.getElementById('searchInput');
     searchButton.addEventListener('click', searchFunction);
+    input.addEventListener('keyup', ({key}) => {
+        if (key == 'Enter') {
+            searchFunction()
+        }
+    })
 }
 
 export default router;
