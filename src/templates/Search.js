@@ -1,7 +1,7 @@
 const Search = () => {
     const view = `
         <div class="Search">
-            <label for="searchInput">
+            <label class="Search--content" for="searchContent">
                 <input id="searchInput" type="search" class="search--bar" placeholder="Busca a tu personaje favorito ..." />
                 <button class="search--button" id="searchButton" type="submit" value="Submit">
                     Buscar
